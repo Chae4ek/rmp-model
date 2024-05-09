@@ -1,0 +1,3 @@
+['remote "origin"']
+    url = gdrive://1CTWcPNNPFf3lzZu5G0IXf26dt6dVPudv
+    gdrive_use_service_account = true
