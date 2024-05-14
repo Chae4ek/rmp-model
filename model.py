@@ -37,7 +37,10 @@ class Handler(http.server.SimpleHTTPRequestHandler):
             except (ValueError, OverflowError):
                 pass
         flat = numpy.array([arr], dtype="float64")
-        rf_predicted = rf_model[city_id].predict(flat)[0]
+        if city_id != 1 and city_id != 3:
+            rf_predicted = rf_model[city_id].predict(flat)[0]
+        else:
+            rf_predicted = 0
         xgb_predicted = xgb_model[city_id].predict(flat)[0]
         # response headers
         self.send_response(200)
@@ -53,8 +56,8 @@ if __name__ == '__main__':
         rf_model[0] = pickle.load(file)
     with open("data/models/xgboost_model_kazan_10features.pkl", "rb") as file:
         xgb_model[0] = pickle.load(file)
-    with open("data/models/rf_model_moscow_10features.pkl", "rb") as file:
-        rf_model[1] = pickle.load(file)
+    # with open("data/models/rf_model_moscow_10features.pkl", "rb") as file:
+    #     rf_model[1] = pickle.load(file)
     with open("data/models/xgboost_model_moscow_10features.pkl", "rb") as file:
         xgb_model[1] = pickle.load(file)
     with open("data/models/rf_model_omsk_10features.pkl", "rb") as file:
@@ -63,8 +66,8 @@ if __name__ == '__main__':
         xgb_model[2] = pickle.load(file)
     # with open("data/models/rf_model_spb_10features.pkl", "rb") as file:
     #     rf_model[3] = pickle.load(file)
-    # with open("data/models/xgboost_model_spb_10features.pkl", "rb") as file:
-    #     xgb_model[3] = pickle.load(file)
+    with open("data/models/xgboost_model_spb_10features.pkl", "rb") as file:
+        xgb_model[3] = pickle.load(file)
     with http.server.HTTPServer(('', PORT), Handler) as httpd:
         print('Serving on port', PORT)
         httpd.serve_forever()

@@ -1,0 +1,5 @@
+outs:
+- md5: a6672fe3467acc8d10da6f6e3073ea9f
+  size: 414065
+  hash: md5
+  path: xgboost_model_spb_10features.pkl
