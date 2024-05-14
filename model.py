@@ -61,10 +61,10 @@ if __name__ == '__main__':
         rf_model[2] = pickle.load(file)
     with open("data/models/xgboost_model_omsk_10features.pkl", "rb") as file:
         xgb_model[2] = pickle.load(file)
-    with open("data/models/rf_model_spb_10features.pkl", "rb") as file:
-        rf_model[3] = pickle.load(file)
-    with open("data/models/xgboost_model_spb_10features.pkl", "rb") as file:
-        xgb_model[3] = pickle.load(file)
+    # with open("data/models/rf_model_spb_10features.pkl", "rb") as file:
+    #     rf_model[3] = pickle.load(file)
+    # with open("data/models/xgboost_model_spb_10features.pkl", "rb") as file:
+    #     xgb_model[3] = pickle.load(file)
     with http.server.HTTPServer(('', PORT), Handler) as httpd:
         print('Serving on port', PORT)
         httpd.serve_forever()
