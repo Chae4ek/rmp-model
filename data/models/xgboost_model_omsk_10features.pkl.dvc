@@ -2,4 +2,4 @@ outs:
 - md5: a46350d2a3e18ac71dee1a59ee1621fd
   size: 379829
   hash: md5
-  path: xgboost_model.pkl
+  path: xgboost_model_omsk_10features.pkl

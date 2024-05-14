@@ -1,0 +1,5 @@
+outs:
+- md5: 4771dce394d10da29f913bae2760351c
+  size: 390175
+  hash: md5
+  path: xgboost_model_kazan_10features.pkl

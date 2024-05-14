@@ -1,0 +1,5 @@
+outs:
+- md5: 4cf106b825a2c5a5556a305a33fe1eb2
+  size: 63507154
+  hash: md5
+  path: rf_model_kazan_10features.pkl

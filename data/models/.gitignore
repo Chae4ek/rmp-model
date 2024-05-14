@@ -1,2 +1,10 @@
 /rf_model.pkl
 /xgboost_model.pkl
+/rf_model_kazan_10features.pkl
+/rf_model_moscow_10features.pkl
+/rf_model_omsk_10features.pkl
+/rf_model_spb_10features.pkl
+/xgboost_model_kazan_10features.pkl
+/xgboost_model_moscow_10features.pkl
+/xgboost_model_omsk_10features.pkl
+/xgboost_model_spb_10features.pkl

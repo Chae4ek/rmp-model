@@ -1,0 +1,5 @@
+outs:
+- md5: 0b318adbb882e95e914353fcffb4e05d
+  size: 299752402
+  hash: md5
+  path: rf_model_moscow_10features.pkl
